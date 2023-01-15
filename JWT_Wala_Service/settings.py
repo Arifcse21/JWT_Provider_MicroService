@@ -1,14 +1,17 @@
-
+import os
+import json
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ji9a25t!^m49cd-jvqjk80a6@p(mn^4*jqw6c5y#ytj1nq2254'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+# REFRESH_TOKEN_SECRET = os.environ.get("REFRESH_TOKEN_SECRET")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = []
 
@@ -20,3 +23,6 @@ WSGI_APPLICATION = 'JWT_Wala_Service.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+urls_data = open('urls_config.json')
+URLS = json.load(urls_data)
