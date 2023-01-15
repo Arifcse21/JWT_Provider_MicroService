@@ -1,0 +1,5 @@
+.idea/
+.env
+.loadenv
+.db.sqlite3
+
