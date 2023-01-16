@@ -14,7 +14,7 @@ REFRESH_TOKEN_SECRET = os.environ.get("REFRESH_TOKEN_SECRET")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 ROOT_URLCONF = 'JWT_Wala_Service.urls'
 
