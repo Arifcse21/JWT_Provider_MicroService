@@ -1,13 +1,14 @@
 import os
 import json
 from pathlib import Path
+from .settings_config import *
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
-# REFRESH_TOKEN_SECRET = os.environ.get("REFRESH_TOKEN_SECRET")
+REFRESH_TOKEN_SECRET = os.environ.get("REFRESH_TOKEN_SECRET")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

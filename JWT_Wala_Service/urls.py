@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.cong import settings
+from django.conf import settings
 url = settings.URLS
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(url['jwt_wala_api'], include('jwt_wala.urls')),
+    path("", include('jwt_wala.urls')),
 ]
