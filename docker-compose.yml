@@ -3,6 +3,7 @@ version: '3.9'
 services:
   jwt_wala:
     image: jwt:latest
+    container_name: jwt_wala
     build:
       context: .
       network: host

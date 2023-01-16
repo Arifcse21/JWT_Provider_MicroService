@@ -1,6 +1,6 @@
 python manage.py makemigrations
 python manage.py migrate
-python manage.py createsuperuser --username $SUPER_USER_NAME --email $SUPER_USER_EMAIL --password $SUPER_USER_PASSWORD -y --noinput
+DJANGO_SUPERUSER_PASSWORD=$SUPER_USER_PASSWORD python manage.py createsuperuser --username $SUPER_USER_NAME --email $SUPER_USER_EMAIL --noinput
 python manage.py runserver 0.0.0.0:5000
 
 
